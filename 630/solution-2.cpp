@@ -8,7 +8,7 @@ using namespace std;
 class Solution {
 public:
     int scheduleCourse(vector<vector<int>>& courses) {
-        sort(courses.begin(), courses.end(), [&](vector<int> i,vector<int> j){return i[1]<j[1];});
+        sort(courses.begin(), courses.end(), [&](vector<int>& i,vector<int>& j){return i[1]<j[1];});
         
         int sum_duration = 0;
         int course_count = 0;
