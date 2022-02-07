@@ -29,7 +29,7 @@
             "command": "/usr/bin/g++",
             "args": [
                 "-std=c++17",
-                // "-fsanitize=address",
+                "-fsanitize=address",
                 "-fdiagnostics-color=always",
                 "-g",
                 "${fileDirname}/main.cpp",
