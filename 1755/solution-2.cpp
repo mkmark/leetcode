@@ -1,6 +1,7 @@
+// use vector instead of set
+
 #include <vector>       // std::vector
-#include <iostream>     // std::iostreamd
-#include <unordered_set>
+#include <iostream>     // std::iostream
 #include <algorithm>
 
 using namespace std;
@@ -17,8 +18,8 @@ public:
         vector<int> nums_2(nums.begin()+nums_1_size, nums.end());
 
         // sum each pile
-        unordered_set<int> nums_1_sum_set = {0};
-        unordered_set<int> nums_2_sum_set = {0};
+        vector<int> nums_1_sum_set = {0};
+        vector<int> nums_2_sum_set = {0};
         int stop = 0;
         if(dfs_all_sub_sum(nums_1, nums_1_sum_set, 0, 0, goal, stop) == 0){
             return 0;
@@ -48,14 +49,14 @@ public:
         return res;
     }
 
-    void dfs_all_sub_sum(vector<int>& arr, unordered_set<int>& set, int sum, int i){
+    void dfs_all_sub_sum(vector<int>& arr, vector<int>& set, int sum, int i){
         if (i>=arr.size()){
             return;
         }
-        // set.insert(sum);
+        // set.push_back(sum);
         dfs_all_sub_sum(arr, set, sum, i+1);
         sum+=arr[i];
-        set.insert(sum);
+        set.push_back(sum);
         dfs_all_sub_sum(arr, set, sum, i+1);
     }
 
@@ -70,7 +71,7 @@ public:
      * @param stop indicate if we should stop
      * @return int 0 indicates we should return 0 immediately as we have luckily bumped into a subset that meets the goal
      */
-    int dfs_all_sub_sum(vector<int>& arr, unordered_set<int>& set, int sum, int i, int goal, int& stop){
+    int dfs_all_sub_sum(vector<int>& arr, vector<int>& set, int sum, int i, int goal, int& stop){
         if (stop){
             return 0;
         }
@@ -81,14 +82,14 @@ public:
             stop = 1;
             return 0;
         }
-        // set.insert(sum);
+        // set.push_back(sum);
         dfs_all_sub_sum(arr, set, sum, i+1, goal, stop);
         sum+=arr[i];
         if (sum == goal){
             stop = 1;
             return 0;
         }
-        set.insert(sum);
+        set.push_back(sum);
         dfs_all_sub_sum(arr, set, sum, i+1, goal, stop);
         return 1;
     }
