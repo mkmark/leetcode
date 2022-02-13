@@ -1,3 +1,6 @@
+// Runtime: 68 ms, faster than 87.62% of C++ online submissions for Find Valid Matrix Given Row and Column Sums.
+// Memory Usage: 33.5 MB, less than 20.17% of C++ online submissions for Find Valid Matrix Given Row and Column Sums.
+
 #include <vector>       // std::vector
 #include <algorithm>    // std::sort
 #include <numeric>      // std::iota

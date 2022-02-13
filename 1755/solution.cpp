@@ -1,3 +1,6 @@
+// Runtime: 953 ms, faster than 75.74% of C++ online submissions for Closest Subsequence Sum.
+// Memory Usage: 236.9 MB, less than 5.15% of C++ online submissions for Closest Subsequence Sum.
+
 #include <vector>       // std::vector
 #include <iostream>     // std::iostreamd
 #include <unordered_set>

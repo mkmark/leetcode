@@ -1,3 +1,6 @@
+// Runtime: 1460 ms, faster than 5.04% of C++ online submissions for Minimum Height Trees.
+// Memory Usage: 461.7 MB, less than 5.03% of C++ online submissions for Minimum Height Trees.
+
 #include <vector>       // std::vector
 #include <unordered_set>// std::unordered_set
 #include <stack>        // std::stack

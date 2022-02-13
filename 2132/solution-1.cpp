@@ -1,3 +1,6 @@
+// Runtime: 456 ms, faster than 94.25% of C++ online submissions for Stamping the Grid.
+// Memory Usage: 197.5 MB, less than 52.54% of C++ online submissions for Stamping the Grid.
+
 #include <vector>       // std::vector
 #include <iostream>     // std::iostream
 

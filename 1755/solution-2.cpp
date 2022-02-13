@@ -1,3 +1,6 @@
+// Runtime: 412 ms, faster than 97.06% of C++ online submissions for Closest Subsequence Sum.
+// Memory Usage: 55.9 MB, less than 88.24% of C++ online submissions for Closest Subsequence Sum.
+
 // use vector instead of set
 
 #include <vector>       // std::vector

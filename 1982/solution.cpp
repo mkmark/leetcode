@@ -1,3 +1,6 @@
+// Runtime: 850 ms, faster than 35.52% of C++ online submissions for Find Array Given Subset Sums.
+// Memory Usage: 126.1 MB, less than 75.68% of C++ online submissions for Find Array Given Subset Sums.
+
 #include <vector>       // std::vector
 #include <algorithm>    // std::sort
 #include <tuple>        // tuple

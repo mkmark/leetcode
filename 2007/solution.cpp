@@ -1,3 +1,6 @@
+// Runtime: 244 ms, faster than 96.35% of C++ online submissions for Find Original Array From Doubled Array.
+// Memory Usage: 116.8 MB, less than 97.83% of C++ online submissions for Find Original Array From Doubled Array.
+
 #include <vector>       // std::vector
 #include <algorithm>    // std::sort
 

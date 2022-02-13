@@ -1,3 +1,6 @@
+// Runtime: 473 ms, faster than 54.87% of C++ online submissions for Earliest Possible Day of Full Bloom.
+// Memory Usage: 155.1 MB, less than 97.49% of C++ online submissions for Earliest Possible Day of Full Bloom.
+
 #include <vector>       // std::vector
 #include <iostream>     // std::iostream
 #include <algorithm>    // std::sort

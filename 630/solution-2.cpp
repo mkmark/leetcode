@@ -1,3 +1,6 @@
+// Runtime: 192 ms, faster than 96.00% of C++ online submissions for Course Schedule III.
+// Memory Usage: 56.2 MB, less than 61.20% of C++ online submissions for Course Schedule III.
+
 #include <vector>       // std::vector
 #include <iostream>     // std::iostream
 #include <algorithm>    // std::sort

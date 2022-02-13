@@ -1,3 +1,6 @@
+// Runtime: 40 ms, faster than 93.62% of C++ online submissions for Strange Printer II.
+// Memory Usage: 16.4 MB, less than 67.23% of C++ online submissions for Strange Printer II.
+
 #include <vector>       // std::vector
 #include <iostream>     // std::iostream
 

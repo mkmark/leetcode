@@ -1,3 +1,6 @@
+// Runtime: 143 ms, faster than 27.59% of C++ online submissions for Closest Dessert Cost.
+// Memory Usage: 10.1 MB, less than 33.27% of C++ online submissions for Closest Dessert Cost.
+
 #include <vector>       // std::vector
 #include <iostream>     // std::iostream
 #include <math.h>

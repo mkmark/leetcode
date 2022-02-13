@@ -1,3 +1,6 @@
+// Runtime: 53 ms, faster than 90.49% of C++ online submissions for Recover the Original Array.
+// Memory Usage: 28.3 MB, less than 76.34% of C++ online submissions for Recover the Original Array.
+
 #include <vector>       // std::vector
 #include <algorithm>    // std::sort
 

@@ -1,3 +1,6 @@
+// Runtime: 404 ms, faster than 88.46% of C++ online submissions for Largest Color Value in a Directed Graph.
+// Memory Usage: 144.4 MB, less than 73.43% of C++ online submissions for Largest Color Value in a Directed Graph.
+
 // count by color on the first seen basis
 // count from end of the path
 // remove the dead ends as couting as a recursive approach, using queue

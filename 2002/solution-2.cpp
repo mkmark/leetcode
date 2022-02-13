@@ -1,3 +1,6 @@
+// Runtime: 3 ms, faster than 99.65% of C++ online submissions for Maximum Product of the Length of Two Palindromic Subsequences.
+// Memory Usage: 6.1 MB, less than 45.94% of C++ online submissions for Maximum Product of the Length of Two Palindromic Subsequences.
+
 // https://leetcode.com/problems/maximum-product-of-the-length-of-two-palindromic-subsequences/discuss/1458289/Mask-DP
 
 #include <vector>       // std::vector

@@ -1,3 +1,6 @@
+// Runtime: 446 ms, faster than 78.08% of C++ online submissions for Minimum Difference in Sums After Removal of Elements.
+// Memory Usage: 142 MB, less than 55.13% of C++ online submissions for Minimum Difference in Sums After Removal of Elements.
+
 #include <vector>       // std::vector
 #include <iostream>     // std::iostream
 #include <queue>        // std::priority_queue

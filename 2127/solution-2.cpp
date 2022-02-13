@@ -1,3 +1,6 @@
+// Runtime: 591 ms, faster than 39.14% of C++ online submissions for Maximum Employees to Be Invited to a Meeting.
+// Memory Usage: 188.5 MB, less than 25.05% of C++ online submissions for Maximum Employees to Be Invited to a Meeting.
+
 #include <vector>       // std::vector
 #include <iostream>     // std::iostream
 #include <algorithm>    // std::sort

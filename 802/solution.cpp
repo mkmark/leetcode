@@ -1,3 +1,6 @@
+// Runtime: 211 ms, faster than 58.42% of C++ online submissions for Find Eventual Safe States.
+// Memory Usage: 47.8 MB, less than 55.35% of C++ online submissions for Find Eventual Safe States.
+
 #include <vector>       // std::vector
 #include <iostream>     // std::iostream
 
