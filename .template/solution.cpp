@@ -1,3 +1,12 @@
+/*
+author: mark@mkmark.net
+time: O()
+space: O()
+
+Runtime: 
+Memory Usage: 
+*/
+
 #include <vector>       // std::vector
 #include <iostream>     // std::iostream
 
@@ -10,6 +19,5 @@ public:
     }
 };
 
-// https://stackoverflow.com/questions/31162367/significance-of-ios-basesync-with-stdiofalse-cin-tienull
 static bool     _foo = ios::sync_with_stdio(false);
 static ostream* _bar = cin.tie(NULL);
