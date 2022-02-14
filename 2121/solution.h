@@ -1,5 +1,11 @@
-// Runtime: 445 ms, faster than 74.12% of C++ online submissions for Maximum Product of the Length of Two Palindromic Subsequences.
-// Memory Usage: 121.5 MB, less than 83.76% of C++ online submissions for Maximum Product of the Length of Two Palindromic Subsequences.
+/*
+author: mark@mkmark.net
+time: O()
+space: O()
+
+Runtime: 445 ms, faster than 74.12% of C++ online submissions for Maximum Product of the Length of Two Palindromic Subsequences.
+Memory Usage: 121.5 MB, less than 83.76% of C++ online submissions for Maximum Product of the Length of Two Palindromic Subsequences.
+*/
 
 #include <vector>
 #include <unordered_map>

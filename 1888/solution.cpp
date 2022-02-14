@@ -1,5 +1,11 @@
-// Runtime: 22 ms, faster than 100.00% of C++ online submissions for Minimum Number of Flips to Make the Binary String Alternating.
-// Memory Usage: 11.6 MB, less than 75.97% of C++ online submissions for Minimum Number of Flips to Make the Binary String Alternating.
+/*
+author: mark@mkmark.net
+time: O()
+space: O()
+
+Runtime: 22 ms, faster than 100.00% of C++ online submissions for Minimum Number of Flips to Make the Binary String Alternating.
+Memory Usage: 11.6 MB, less than 75.97% of C++ online submissions for Minimum Number of Flips to Make the Binary String Alternating.
+*/
 
 #include <vector>       // std::vector
 #include <iostream>     // std::iostream

@@ -1,5 +1,11 @@
-// Runtime: 36 ms, faster than 100.00% of C++ online submissions for Minimum Deletions to Make String Balanced.
-// Memory Usage: 22.1 MB, less than 67.50% of C++ online submissions for Minimum Deletions to Make String Balanced.
+/*
+author: mark@mkmark.net
+time: O()
+space: O()
+
+Runtime: 36 ms, faster than 100.00% of C++ online submissions for Minimum Deletions to Make String Balanced.
+Memory Usage: 22.1 MB, less than 67.50% of C++ online submissions for Minimum Deletions to Make String Balanced.
+*/
 
 #include <vector>       // std::vector
 #include <iostream>     // std::iostream

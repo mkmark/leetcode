@@ -1,5 +1,11 @@
-// Runtime: 76 ms, faster than 100.00% of C++ online submissions for Ways to Make a Fair Array.
-// Memory Usage: 98.7 MB, less than 41.14% of C++ online submissions for Ways to Make a Fair Array.
+/*
+author: mark@mkmark.net
+time: O()
+space: O()
+
+Runtime: 76 ms, faster than 100.00% of C++ online submissions for Ways to Make a Fair Array.
+Memory Usage: 98.7 MB, less than 41.14% of C++ online submissions for Ways to Make a Fair Array.
+*/
 
 #include <vector>       // std::vector
 #include <iostream>     // std::iostream

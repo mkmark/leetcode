@@ -1,5 +1,11 @@
-// Runtime: 7 ms, faster than 88.19% of C++ online submissions for Minimum Number of Operations to Move All Balls to Each Box.
-// Memory Usage: 8.9 MB, less than 90.32% of C++ online submissions for Minimum Number of Operations to Move All Balls to Each Box.
+/*
+author: mark@mkmark.net
+time: O()
+space: O()
+
+Runtime: 7 ms, faster than 88.19% of C++ online submissions for Minimum Number of Operations to Move All Balls to Each Box.
+Memory Usage: 8.9 MB, less than 90.32% of C++ online submissions for Minimum Number of Operations to Move All Balls to Each Box.
+*/
 
 #include <vector>       // std::vector
 #include <iostream>     // std::iostream

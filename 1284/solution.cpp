@@ -1,5 +1,11 @@
-// Runtime: 3 ms, faster than 82.49% of C++ online submissions for Minimum Number of Flips to Convert Binary Matrix to Zero Matrix.
-// Memory Usage: 6.9 MB, less than 80.55% of C++ online submissions for Minimum Number of Flips to Convert Binary Matrix to Zero Matrix.
+/*
+author: mark@mkmark.net
+time: O()
+space: O()
+
+Runtime: 3 ms, faster than 82.49% of C++ online submissions for Minimum Number of Flips to Convert Binary Matrix to Zero Matrix.
+Memory Usage: 6.9 MB, less than 80.55% of C++ online submissions for Minimum Number of Flips to Convert Binary Matrix to Zero Matrix.
+*/
 
 #include <vector>       // std::vector
 #include <iostream>     // std::iostream

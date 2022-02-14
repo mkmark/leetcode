@@ -1,5 +1,11 @@
-// Runtime: 148 ms, faster than 100.00% of C++ online submissions for Longest Palindrome by Concatenating Two Letter Words.
-// Memory Usage: 171.7 MB, less than 12.69% of C++ online submissions for Longest Palindrome by Concatenating Two Letter Words.
+/*
+author: mark@mkmark.net
+time: O()
+space: O()
+
+Runtime: 148 ms, faster than 100.00% of C++ online submissions for Longest Palindrome by Concatenating Two Letter Words.
+Memory Usage: 171.7 MB, less than 12.69% of C++ online submissions for Longest Palindrome by Concatenating Two Letter Words.
+*/
 
 #include <vector>       // std::vector
 #include <iostream>     // std::iostream

@@ -1,5 +1,11 @@
-// Runtime: 328 ms, faster than 85.48% of C++ online submissions for People Whose List of Favorite Companies Is Not a Subset of Another List.
-// Memory Usage: 89.7 MB, less than 38.17% of C++ online submissions for People Whose List of Favorite Companies Is Not a Subset of Another List.
+/*
+author: mark@mkmark.net
+time: O()
+space: O()
+
+Runtime: 328 ms, faster than 85.48% of C++ online submissions for People Whose List of Favorite Companies Is Not a Subset of Another List.
+Memory Usage: 89.7 MB, less than 38.17% of C++ online submissions for People Whose List of Favorite Companies Is Not a Subset of Another List.
+*/
 
 #include <vector>       // std::vector
 #include <iostream>     // std::iostream

@@ -1,5 +1,11 @@
-// Runtime: 888 ms, faster than 19.58% of C++ online submissions for StMaximum Number of Achievable Transfer Requests.
-// Memory Usage: 214.5 MB, less than 6.99% of C++ online submissions for StMaximum Number of Achievable Transfer Requests.
+/*
+author: mark@mkmark.net
+time: O()
+space: O()
+
+Runtime: 888 ms, faster than 19.58% of C++ online submissions for StMaximum Number of Achievable Transfer Requests.
+Memory Usage: 214.5 MB, less than 6.99% of C++ online submissions for StMaximum Number of Achievable Transfer Requests.
+*/
 
 #include <vector>       // std::vector
 #include <iostream>     // std::iostream

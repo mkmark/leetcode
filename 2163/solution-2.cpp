@@ -1,5 +1,11 @@
-// Runtime: 446 ms, faster than 78.08% of C++ online submissions for Minimum Difference in Sums After Removal of Elements.
-// Memory Usage: 142 MB, less than 55.13% of C++ online submissions for Minimum Difference in Sums After Removal of Elements.
+/*
+author: mark@mkmark.net
+time: O()
+space: O()
+
+Runtime: 446 ms, faster than 78.08% of C++ online submissions for Minimum Difference in Sums After Removal of Elements.
+Memory Usage: 142 MB, less than 55.13% of C++ online submissions for Minimum Difference in Sums After Removal of Elements.
+*/
 
 #include <vector>       // std::vector
 #include <iostream>     // std::iostream

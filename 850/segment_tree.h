@@ -1,3 +1,7 @@
+/*
+author: mark@mkmark.net
+*/
+
 #include <algorithm>    // std::max min
 #include <vector>
 #include <functional>

@@ -1,5 +1,11 @@
-// Runtime: 4 ms, faster than 99.88% of C++ online submissions for Maximum Good People Based on Statements.
-// Memory Usage: 8.7 MB, less than 22.25% of C++ online submissions for Maximum Good People Based on Statements.
+/*
+author: mark@mkmark.net
+time: O()
+space: O()
+
+Runtime: 4 ms, faster than 99.88% of C++ online submissions for Maximum Good People Based on Statements.
+Memory Usage: 8.7 MB, less than 22.25% of C++ online submissions for Maximum Good People Based on Statements.
+*/
 
 #include <vector>       // std::vector
 #include <iostream>     // std::iostream

@@ -1,7 +1,14 @@
-// Runtime: 76 ms, faster than 80.42% of C++ online submissions for Maximum Product of the Length of Two Palindromic Subsequences.
-// Memory Usage: 10.8 MB, less than 64.24% of C++ online submissions for Maximum Product of the Length of Two Palindromic Subsequences.
+/*
+author: mark@mkmark.net
+time: O()
+space: O()
 
-// https://leetcode.com/problems/paint-house-iii/discuss/?currentPage=1&orderBy=most_votes&query=
+Runtime: 76 ms, faster than 80.42% of C++ online submissions for Maximum Product of the Length of Two Palindromic Subsequences.
+Memory Usage: 10.8 MB, less than 64.24% of C++ online submissions for Maximum Product of the Length of Two Palindromic Subsequences.
+
+reference: https://leetcode.com/problems/paint-house-iii/discuss/?currentPage=1&orderBy=most_votes&query=
+*/
+
 
 #include <vector>       // std::vector
 #include <iostream>     // std::iostream

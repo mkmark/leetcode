@@ -1,5 +1,11 @@
-// Runtime: 734 ms, faster than 78.04% of C++ online submissions for Partition Array Into Two Arrays to Minimize Sum Difference.
-// Memory Usage: 82.6 MB, less than 15.75% of C++ online submissions for Partition Array Into Two Arrays to Minimize Sum Difference.
+/*
+author: mark@mkmark.net
+time: O()
+space: O()
+
+Runtime: 734 ms, faster than 78.04% of C++ online submissions for Partition Array Into Two Arrays to Minimize Sum Difference.
+Memory Usage: 82.6 MB, less than 15.75% of C++ online submissions for Partition Array Into Two Arrays to Minimize Sum Difference.
+*/
 
 // use vector instead of set
 

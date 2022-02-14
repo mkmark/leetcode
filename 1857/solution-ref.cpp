@@ -1,10 +1,17 @@
-// Runtime: 404 ms, faster than 88.46% of C++ online submissions for Largest Color Value in a Directed Graph.
-// Memory Usage: 144.4 MB, less than 73.43% of C++ online submissions for Largest Color Value in a Directed Graph.
+/*
+author: mark@mkmark.net
+time: O()
+space: O()
+
+Runtime: 404 ms, faster than 88.46% of C++ online submissions for Largest Color Value in a Directed Graph.
+Memory Usage: 144.4 MB, less than 73.43% of C++ online submissions for Largest Color Value in a Directed Graph.
+
+reference: https://leetcode.com/problems/largest-color-value-in-a-directed-graph/discuss/1672613/C%2B%2B-topological-sort-%2B-memoization
+*/
 
 // count by color on the first seen basis
 // count from end of the path
 // remove the dead ends as couting as a recursive approach, using queue
-// https://leetcode.com/problems/largest-color-value-in-a-directed-graph/discuss/1672613/C%2B%2B-topological-sort-%2B-memoization
 
 #include <queue>
 #include <string>

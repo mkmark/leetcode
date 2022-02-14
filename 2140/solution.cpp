@@ -1,6 +1,11 @@
-// Runtime: 260 ms, faster than 99.93% of C++ online submissions for Solving Questions With Brainpower.
-// Memory Usage: 124.1 MB, less than 15.57% of C++ online submissions for Solving Questions With Brainpower.
+/*
+author: mark@mkmark.net
+time: O()
+space: O()
 
+Runtime: 260 ms, faster than 99.93% of C++ online submissions for Solving Questions With Brainpower.
+Memory Usage: 124.1 MB, less than 15.57% of C++ online submissions for Solving Questions With Brainpower.
+*/
 #include <vector>       // std::vector
 #include <iostream>     // std::iostream
 

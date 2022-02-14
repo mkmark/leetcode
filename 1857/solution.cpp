@@ -1,5 +1,11 @@
-// count from start of the path
-// remove the dead starts as couting as a recursive approach
+/*
+author: mark@mkmark.net
+time: O()
+space: O()
+
+count from start of the path
+remove the dead starts as couting as a recursive approach
+*/
 
 #include <vector>       // std::vector
 #include <string>       // std::string

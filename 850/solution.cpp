@@ -1,5 +1,11 @@
-// Runtime: 8 ms, faster than 89.01% of C++ online submissions for Rectangle Area II.
-// Memory Usage: 10.1 MB, less than 30.42% of C++ online submissions for Rectangle Area II.
+/*
+author: mark@mkmark.net
+time: O()
+space: O()
+
+Runtime: 8 ms, faster than 89.01% of C++ online submissions for Rectangle Area II.
+Memory Usage: 10.1 MB, less than 30.42% of C++ online submissions for Rectangle Area II.
+*/
 
 #include <vector>       // std::vector
 #include <iostream>     // std::iostream

@@ -1,11 +1,15 @@
-// implemented according to leetcode JAVA solution
-// count and value are stored in each node, linked by node pointers, i.e. tree as linked nodes
-// range_add optimized because we dont care about the exact status (i.e. how many rectangles are there) at a single point, we only care if it has rectangle over it or not, so a special method of top-to-bottom update is adopted instead of a traditional bottom-to-top one
-// comparatively a traditional segment tree (for range_sum query) is updated bottom-to-top
-// generally there should be a so-called push_up and push_down method defined for such situations
+/*
+author: mark@mkmark.net
 
-// a direct translation that use pointer to record left and right child node will NOT work because the newly constructed object will be deconstructed after each call of "range_add". A solution would be store the newly constructed node in a static vector, which would require a tree-vector index map to avoid mutiple reconstruction, thus no longer require the left and right pointer.
-// for unkown reason, updating a class static object (line 56) messes up all the property of current object... not working , abandon
+implemented according to leetcode JAVA solution
+count and value are stored in each node, linked by node pointers, i.e. tree as linked nodes
+range_add optimized because we dont care about the exact status (i.e. how many rectangles are there) at a single point, we only care if it has rectangle over it or not, so a special method of top-to-bottom update is adopted instead of a traditional bottom-to-top one
+comparatively a traditional segment tree (for range_sum query) is updated bottom-to-top
+generally there should be a so-called push_up and push_down method defined for such situations
+
+a direct translation that use pointer to record left and right child node will NOT work because the newly constructed object will be deconstructed after each call of "range_add". A solution would be store the newly constructed node in a static vector, which would require a tree-vector index map to avoid mutiple reconstruction, thus no longer require the left and right pointer.
+for unkown reason, updating a class static object (line 56) messes up all the property of current object... not working , abandon
+*/
 
 #include <algorithm>    // std::max min
 #include <vector>
