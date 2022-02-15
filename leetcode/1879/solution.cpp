@@ -62,7 +62,7 @@ public:
                     nums1, 
                     nums2, 
                     i+1,
-                    used_j_mask + (1<<j)
+                    used_j_mask | (1<<j)
                 )
             );
         }
