@@ -5,7 +5,7 @@ https://www.geeksforgeeks.org/segment-tree-efficient-implementation/
 
 ## scene
 
-see [segment_tree.h](../850/segment_tree.h)
+see [segment_tree.h](../leetcode/850/segment_tree.h)
 
 ## mechnism
 
