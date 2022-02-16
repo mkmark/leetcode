@@ -39,7 +39,7 @@ public:
         if (i==nums.size()){
             return 0;
         }
-        if (dp[mask]!=-1){
+        if (dp[mask] != -1){
             return dp[mask];
         }
         int res = 0;

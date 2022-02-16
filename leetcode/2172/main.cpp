@@ -1,6 +1,6 @@
 #include <vector>
 #include <iostream>
-#include "solution.cpp"
+#include "solution_2.cpp"
 #include <chrono>
 
 int main()
