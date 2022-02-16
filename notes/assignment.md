@@ -1,5 +1,16 @@
-# Permutation
+# Assignment
 
+## hungarian
+
+https://en.wikipedia.org/wiki/Hungarian_algorithm
+
+time: O(n^3)
+
+see
+[2172](../leetcode/2172/solution_3.cpp)
+
+
+## iter
 time: O(P_n^k)
 
 see 

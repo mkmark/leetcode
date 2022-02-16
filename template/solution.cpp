@@ -7,8 +7,7 @@ Runtime:
 Memory Usage: 
 */
 
-#include <vector>       // std::vector
-#include <iostream>     // std::iostream
+#include <bits/stdc++.h>
 
 using namespace std;
 

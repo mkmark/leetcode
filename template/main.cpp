@@ -1,7 +1,5 @@
-#include <vector>
-#include <iostream>
+#include <bits/stdc++.h>
 #include "solution.cpp"
-#include <chrono>
 
 int main()
 {

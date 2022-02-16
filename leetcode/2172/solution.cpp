@@ -7,8 +7,7 @@ Runtime: 40 ms, faster than 83.36% of C++ online submissions for Maximum AND Sum
 Memory Usage: 9.2 MB, less than 89.61% of C++ online submissions for Maximum AND Sum of Array.
 */
 
-#include <vector>       // std::vector
-#include <iostream>     // std::iostream
+#include <bits/stdc++.h>
 
 using namespace std;
 
