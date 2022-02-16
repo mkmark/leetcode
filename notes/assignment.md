@@ -7,6 +7,7 @@ https://en.wikipedia.org/wiki/Hungarian_algorithm
 time: O(n^3)
 
 see
+[1879](../leetcode/1879/solution_2.cpp)
 [2172](../leetcode/2172/solution_3.cpp)
 
 

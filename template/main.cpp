@@ -1,30 +1,29 @@
-#include <bits/stdc++.h>
 #include "solution.cpp"
 
 int main()
 {
-    std::vector<std::vector<int>> mat = {{}};
-    std::vector<int> arr = {};
+    vvi mat = {{}};
+    vi arr = {};
     int num = 0;
     string s = "";
 
-    std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
+    chrono::steady_clock::time_point begin = chrono::steady_clock::now();
     Solution solution;
     auto output = solution.solution();
-    std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
-    std::cout << "Time difference = " << std::chrono::duration_cast<std::chrono::microseconds> (end - begin).count() << "µs" << std::endl;
+    chrono::steady_clock::time_point end = chrono::steady_clock::now();
+    cout << "Time difference = " << chrono::duration_cast<chrono::microseconds> (end - begin).count() << "µs" << endl;
 
-    std::cout << output << std::endl;
+    cout << output << endl;
 
     // for (int i: output){
-    //     std::cout << i << ' ';
+    //     cout << i << ' ';
     // }
 
     // for (auto i: output){
     //     for (int j: i){
-    //         std::cout << j << ' ';
+    //         cout << j << ' ';
     //     }
-    //     std::cout << '\n';
+    //     cout << '\n';
     // }
 
     return 0;

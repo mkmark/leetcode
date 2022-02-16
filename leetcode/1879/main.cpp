@@ -1,7 +1,4 @@
-#include <vector>
-#include <iostream>
-#include "solution.cpp"
-#include <chrono>
+#include "solution_2.cpp"
 
 int main()
 {
