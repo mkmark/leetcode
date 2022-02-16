@@ -17,5 +17,9 @@ public:
     }
 };
 
-static bool     _foo = ios::sync_with_stdio(false);
-static ostream* _bar = cin.tie(NULL);
+const static auto initialize = [] {
+    std::ios::sync_with_stdio(false);
+    std::cin.tie(nullptr);
+    std::cout.tie(nullptr);
+    return nullptr;
+}();
