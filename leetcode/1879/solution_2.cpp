@@ -22,7 +22,7 @@ typedef vector<vector<int>> vvi;
 
 class Solution {
 public:
-    #include "hungarian.h"
+    #include "hungarian.hpp"
 
     int minimumXORSum(vector<int>& nums1, vector<int>& nums2) {
         int n = nums1.size();
