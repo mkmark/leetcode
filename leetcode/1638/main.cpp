@@ -7,11 +7,12 @@ int main()
     vector<vector<int>> mat = {{}};
     vector<int> arr = {};
     int num = 0;
-    string s = "";
+    string s = "abaababbbabababababaaaaaabababbbabaababbbabababacabaaaaaabababbbabacbabbbabababababaaaaaabababbb";
+    string t = "babaabacbbbbabbbaaaabababaaaacabbabaababbbbbabbbaaaabababaaaababbabaababbbbbabcbaaaabababaaaabab";
 
     chrono::steady_clock::time_point begin = chrono::steady_clock::now();
     Solution solution;
-    auto output = solution.solution();
+    auto output = solution.countSubstrings(s,t);
     chrono::steady_clock::time_point end = chrono::steady_clock::now();
     cout << "Time difference = " << chrono::duration_cast<chrono::microseconds> (end - begin).count() << "µs" << endl;
 
