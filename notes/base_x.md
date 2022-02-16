@@ -13,5 +13,12 @@ while(n!=0){
 }
 ```
 
-## binary
-
+```cpp
+int int_pow(int x, int p) {
+    int res = 1;
+    for (int i=1; i<=p; ++i){
+        res *= x;
+    }
+    return res;
+}
+```

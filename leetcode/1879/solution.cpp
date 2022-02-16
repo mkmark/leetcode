@@ -1,7 +1,7 @@
 /*
 author: mark@mkmark.net
-time: O(!n)
-space: O(1)
+time: O(P_n_n)
+space: O(2^n)
 
 Runtime: 16 ms, faster than 95.58% of C++ online submissions for Minimum XOR Sum of Two Arrays.
 Memory Usage: 8.9 MB, less than 92.77% of C++ online submissions for Minimum XOR Sum of Two Arrays.

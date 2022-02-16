@@ -1,10 +1,11 @@
-# Derangement
+# Permutation
 
-https://en.wikipedia.org/wiki/Derangement
+time: O(P_n^k)
 
-time: O(!n)
-
-see [1879](../leetcode/1879/solution.cpp), [1947](../leetcode/1947/solution.cpp)
+see 
+[1879](../leetcode/1879/solution.cpp)
+[1947](../leetcode/1947/solution.cpp)
+[2172](../leetcode/2172/solution.cpp)
 
 ```cpp
 /**
