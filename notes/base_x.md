@@ -13,4 +13,4 @@ while(n!=0){
 }
 ```
 
-see [base_x.h](../leetcode/2172/base_x.h)
+see [base_x.hpp](../leetcode/2172/base_x.hpp)

@@ -32,7 +32,7 @@ public:
         );
     }
 
-    #include "base_x.h"
+    #include "base_x.hpp"
     
     int dfs_max_and_sum(
         vector<int>& nums,

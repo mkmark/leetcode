@@ -13,7 +13,7 @@ Memory Usage: 10.1 MB, less than 30.42% of C++ online submissions for Rectangle 
 #include <set>          // std::set
 #include <map>          // std::set
 #include <numeric>      // std::iota
-#include "segment_tree.h"
+#include "segment_tree.hpp"
 
 using namespace std;
 
