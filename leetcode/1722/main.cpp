@@ -1,0 +1,33 @@
+#include <bits/stdc++.h>
+#include "solution.cpp"
+using namespace std;
+
+int main()
+{
+    vector<vector<int>> mat = {};
+    vector<int> arr_1 = {1};
+    vector<int> arr_2 = {2};
+    int num = 0;
+    string s = "";
+
+    chrono::steady_clock::time_point begin = chrono::steady_clock::now();
+    Solution solution;
+    auto output = solution.minimumHammingDistance(arr_1, arr_2, mat);
+    chrono::steady_clock::time_point end = chrono::steady_clock::now();
+    cout << "Time difference = " << chrono::duration_cast<chrono::microseconds> (end - begin).count() << "µs" << endl;
+
+    cout << output << endl;
+
+    // for (int i: output){
+    //     cout << i << ' ';
+    // }
+
+    // for (auto i: output){
+    //     for (int j: i){
+    //         cout << j << ' ';
+    //     }
+    //     cout << '\n';
+    // }
+
+    return 0;
+}
