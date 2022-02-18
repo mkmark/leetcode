@@ -1,13 +1,20 @@
 #include <bits/stdc++.h>
+#include "../../notes/leetcode.hpp"
 #include "solution.cpp"
 using namespace std;
 
 int main()
 {
-    vector<vector<int>> mat = {{}};
-    vector<int> arr = {};
-    int num = 0;
-    string s = "";
+    // vector<string> lines = get_lines("x.in");
+    // vector<vector<int>> mat_1 = s2vvi(lines[0]);
+    // vector<int> arr_1 = s2vi(lines[0]);
+    // int num_1 = s2i(lines[0]);
+    // string s_1 = lines[0];
+
+    vector<vector<int>> mat_1 = {{}};
+    vector<int> arr_1 = {};
+    int num_1 = 0;
+    string s_1 = "";
 
     chrono::steady_clock::time_point begin = chrono::steady_clock::now();
     Solution solution;
