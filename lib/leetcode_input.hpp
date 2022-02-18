@@ -65,7 +65,7 @@ vector<string> leetcode_input::split (string s, string delimiter) {
         res.push_back (token);
     }
 
-    res.push_back (s.substr (pos_start));
+    res.push_back(s.substr(pos_start));
     return res;
 }
 
