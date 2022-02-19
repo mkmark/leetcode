@@ -6,7 +6,7 @@ author: mark@mkmark.net
 
 using namespace std;
 
-class leetcode_input{
+class LeetCodeInput{
     vector<string> get_lines(string path);
     vector<string> split(string s, string delimiter);
     vector<string> split(const string &s, char delim);
@@ -27,7 +27,7 @@ class leetcode_input{
 public: 
     vector<string> lines;
 
-    leetcode_input(string path){
+    LeetCodeInput(string path){
         lines = get_lines(path);
     }
 
@@ -39,7 +39,7 @@ public:
     vector<vector<string>>  get_vvs(int line)   {return r2vvs(lines[line]);};
 };
 
-vector<string> leetcode_input::get_lines(string path){
+vector<string> LeetCodeInput::get_lines(string path){
     string line;
     vector<string> lines;
     ifstream input(path);
@@ -54,7 +54,7 @@ vector<string> leetcode_input::get_lines(string path){
     return lines;
 }
 
-vector<string> leetcode_input::split (string s, string delimiter) {
+vector<string> LeetCodeInput::split (string s, string delimiter) {
     size_t pos_start = 0, pos_end, delim_len = delimiter.length();
     string token;
     vector<string> res;
@@ -69,7 +69,7 @@ vector<string> leetcode_input::split (string s, string delimiter) {
     return res;
 }
 
-vector<string> leetcode_input::split (const string &s, char delim) {
+vector<string> LeetCodeInput::split (const string &s, char delim) {
     vector<string> result;
     stringstream ss (s);
     string item;
@@ -81,20 +81,20 @@ vector<string> leetcode_input::split (const string &s, char delim) {
     return result;
 }
 
-int leetcode_input::r2i(string& r){
+int LeetCodeInput::r2i(string& r){
     return stoi(r);
 }
 
-string leetcode_input::r2s(string& r){
+string LeetCodeInput::r2s(string& r){
     return r.substr(1, r.size() - 2);;
 }
 
-vector<string> leetcode_input::r2vr(string& r){
+vector<string> LeetCodeInput::r2vr(string& r){
     r = r.substr(1, r.size() - 2);
     return split(r, ',');
 }
 
-vector<int> leetcode_input::vr2vi(vector<string>& vr){
+vector<int> LeetCodeInput::vr2vi(vector<string>& vr){
     int n = vr.size();
     vector<int> vi(n);
     for (int i=0; i<n; ++i){
@@ -103,7 +103,7 @@ vector<int> leetcode_input::vr2vi(vector<string>& vr){
     return vi;
 }
 
-vector<string> leetcode_input::vr2vs(vector<string>& vr){
+vector<string> LeetCodeInput::vr2vs(vector<string>& vr){
     int n = vr.size();
     vector<string> vs(n);
     for (int i=0; i<n; ++i){
@@ -112,7 +112,7 @@ vector<string> leetcode_input::vr2vs(vector<string>& vr){
     return vs;
 }
 
-vector<vector<string>> leetcode_input::r2vvr(string& r){
+vector<vector<string>> LeetCodeInput::r2vvr(string& r){
     r = r.substr(2, r.size() - 4);
     vector<string> vr = split(r, "],[");
     int m = vr.size();
@@ -123,7 +123,7 @@ vector<vector<string>> leetcode_input::r2vvr(string& r){
     return vvr;
 }
 
-vector<vector<int>> leetcode_input::vvr2vvi(vector<vector<string>>& vvr){
+vector<vector<int>> LeetCodeInput::vvr2vvi(vector<vector<string>>& vvr){
     int n = vvr.size();
     vector<vector<int>> vvi(n);
     for (int i=0; i<n; ++i){
@@ -132,7 +132,7 @@ vector<vector<int>> leetcode_input::vvr2vvi(vector<vector<string>>& vvr){
     return vvi;
 }
 
-vector<vector<string>> leetcode_input::vvr2vvs(vector<vector<string>>& vvr){
+vector<vector<string>> LeetCodeInput::vvr2vvs(vector<vector<string>>& vvr){
     int n = vvr.size();
     vector<vector<string>> vvs(n);
     for (int i=0; i<n; ++i){
@@ -141,22 +141,22 @@ vector<vector<string>> leetcode_input::vvr2vvs(vector<vector<string>>& vvr){
     return vvs;
 }
 
-vector<int> leetcode_input::r2vi(string& r){
+vector<int> LeetCodeInput::r2vi(string& r){
     auto vr = r2vr(r);
     return vr2vi(vr);
 }
 
-vector<vector<int>> leetcode_input::r2vvi(string& r){
+vector<vector<int>> LeetCodeInput::r2vvi(string& r){
     auto vvr = r2vvr(r);
     return vvr2vvi(vvr);
 }
 
-vector<string> leetcode_input::r2vs(string& r){
+vector<string> LeetCodeInput::r2vs(string& r){
     auto vr = r2vr(r);
     return vr2vs(vr);
 }
 
-vector<vector<string>> leetcode_input::r2vvs(string& r){
+vector<vector<string>> LeetCodeInput::r2vvs(string& r){
     auto vvr = r2vvr(r);
     return vvr2vvs(vvr);
 }

@@ -8,8 +8,8 @@ author: mark@mkmark.net
 
 using namespace std;
 
-namespace segment_tree {
-    class segment_tree {
+namespace SegmentTree {
+    class SegmentTree {
         private : vector<long> covered;
         private : vector<long> values;
             
@@ -19,7 +19,7 @@ namespace segment_tree {
             4   5     6   7
             8 9 10 11
         */
-        public : segment_tree(int n)
+        public : SegmentTree(int n)
         {
             int count = 0;
             while( n != 0)

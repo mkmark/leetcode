@@ -5,7 +5,7 @@ author: mark@mkmark.net
 #include <bits/stdc++.h>
 using namespace std;
 
-class graph {
+class Graph {
     int n;
     vector<vector<int>> adj;
     vector<int> grp;
@@ -14,28 +14,28 @@ class graph {
     void dfs(int v, vector<int>& grp, int gid);
  
 public:
-    graph(int n);
-    graph(int n, vector<int>& val);
+    Graph(int n);
+    Graph(int n, vector<int>& val);
     int grp_cnt;
     int max_grp_size();
     void add_edge(int i, int j);
     void group();
 };
 
-graph::graph(int n): n(n){
+Graph::Graph(int n): n(n){
     adj.resize(n);
     grp.resize(n);
     fill_n(grp.begin(), n, -1);
 }
 
-graph::graph(int n, vector<int>& val): n(n){
+Graph::Graph(int n, vector<int>& val): n(n){
     adj.resize(n);
     grp.resize(n);
     fill_n(grp.begin(), n, -1);
     value = val;
 }
 
-void graph::group(){
+void Graph::group(){
     int gid = -1;
  
     for (int i=0; i<n; ++i) {
@@ -49,7 +49,7 @@ void graph::group(){
     grp_cnt = gid+1;
 }
 
-int graph::max_grp_size(){
+int Graph::max_grp_size(){
     int res = 0;
     for (int i=0; i<grp_cnt; ++i) {
         res=max(res, grp_size[i]);
@@ -57,7 +57,7 @@ int graph::max_grp_size(){
     return res;
 }
  
-void graph::dfs(int i, vector<int>& grp, int gid){
+void Graph::dfs(int i, vector<int>& grp, int gid){
     grp[i] = gid;
     for (auto j : adj[i]){
         if (grp[j] == -1){
@@ -66,7 +66,7 @@ void graph::dfs(int i, vector<int>& grp, int gid){
     }
 }
 
-void graph::add_edge(int i, int j){
+void Graph::add_edge(int i, int j){
     adj[i].push_back(j);
     adj[j].push_back(i);
 }

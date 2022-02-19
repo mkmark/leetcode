@@ -5,7 +5,7 @@ author: mark@mkmark.net
 #include <bits/stdc++.h>
 using namespace std;
 
-class disjoint_set {
+class DisjointSet {
 public:
     // const int MAX_SIZE = 10000;
     // int parent[MAX_SIZE];
@@ -13,7 +13,7 @@ public:
     // int size[MAX_SIZE];
     vector<int> size;
 
-    disjoint_set(int max_size) {
+    DisjointSet(int max_size) {
         //
         parent.resize(max_size);
         //
