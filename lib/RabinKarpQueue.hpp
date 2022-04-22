@@ -3,43 +3,76 @@ author: mark@mkmark.net
 */
 
 #include <queue>
+#include <stack>
 #include <string>
 
+template<class T>
 class RabinKarpQueue{
 private:
-    std::queue<char> que;
+    std::queue<T> que;
+    // std::stack<long long> base_power_mods;
+
     long long base_power_mod = 1;
+
+    int get_size(std::string arr){
+        return arr.length();
+    }
+
+    int get_size(T* arr){
+        return *(&arr + 1) - arr;
+    }
+
+    int get_size(vector<T> arr){
+        return arr.size();
+    }
+
+    void fixed_push(T t){
+        hash = (hash*base + val(t)) % prime;
+        que.push(t);
+    }
+
+    void fixed_pop(){
+        hash = (hash + prime - val(*l) * n_power_mod % prime) % prime;
+        que.pop();
+    }
 
 public:
     int base = 26;
-    // int prime = 101   
-    // int prime = 1009
-    // int prime = 10007
-    // int prime = 100003
-    // int prime = 1000003 
-    int prime = 97755331;
+    // int prime = 101;
+    // int prime = 1009;
+    // int prime = 10007;
+    // int prime = 100003;
+    // int prime = 1000003; 
+    // int prime = 97755331;
+    // int prime = 4294967291;
+    int prime = 92232275197933;
     long long hash = 0;
     int size() {return que.size();};
-    char front() {return que.front();};
+    T front() {return que.front();};
 
-    void initial_push(char c){
+    void push(T t){
         base_power_mod = base_power_mod * base % prime;
-        push(c);
+        // base_power_mods.push(base_power_mod);
+        fixed_push(t);
     }
 
-    void push(char c){
-        hash = (hash*base + val(c)) % prime;
-        que.push(c);
-    }
+    // void pop(){
+    //     fixed_pop();
+    //     base_power_mods.pop();
+    //     base_power_mod = base_power_mods.top();
+    // }
 
-    void pop(){
-        hash = (hash - val(que.front()) * base_power_mod) % prime;
-        hash = hash < 0 ? (hash+prime) : hash;
-        que.pop();
+    void push_pop(T t){
+        fixed_push(t);
+        fixed_pop();
     }
 
     inline int val(char& c){
         return c-'a';
+    }
+
+    inline int val(T& t){
+        return t;
     }
 
     int base_power(int power){
@@ -51,29 +84,45 @@ public:
         return res;
     }
 
-    void init(std::string s){
-        int n = s.length();
-        for (int i = 0; i<s.length(); ++i){
-            initial_push(s[i]);
+    void init(std::string::iterator l, std::string::iterator r){
+        // base_power_mods.push(1);
+        for (auto it = l; it != r; ++it){
+            push(*it);
         }
     }
 
+    void init(T* l, T* r){
+        // base_power_mods.push(1);
+        for (auto it = l; it != r; ++it){
+            push(*it);
+        }
+    }
+
+    void init(typename vector<T>::iterator l, typename vector<T>::iterator r){
+        // base_power_mods.push(1);
+        for (auto it = l; it != r; ++it){
+            push(*it);
+        }
+    }
+
+
     RabinKarpQueue(){};
 
-    RabinKarpQueue(std::string s){
-        init(s);
-    };
-
-    RabinKarpQueue(std::string s, int base)
+    RabinKarpQueue(std::string::iterator l, std::string::iterator r, int base)
         : base(base)
     {
-        init(s);
+        init(arr);
     };
 
-    RabinKarpQueue(std::string s, int prime, int base)
+    RabinKarpQueue(T* l, T* r, int base)
         : base(base)
-        , prime(prime)
     {
-        init(s);
+        init(l, r);
+    };
+
+    RabinKarpQueue(typename vector<T>::iterator l, typename vector<T>::iterator r, int base)
+        : base(base)
+    {
+        init(l, r);
     };
 };

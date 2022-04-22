@@ -9,6 +9,7 @@ reference: leetcode 1044 fastest solution
  * @brief suffix array using SA-IS 
  * 
  */
+template <class S>
 class SuffixArray {
 public:
     using size_type = unsigned;
@@ -152,7 +153,8 @@ public:
      * @param n string length
      * @param m bucket size
      */
-    SuffixArray(const std::string& s, size_type n, size_type m)
+    template <class S>
+    SuffixArray(S& s, size_type n, size_type m)
         : data(std::make_unique<size_type[]>(3 * n))
         , sa(data.get())
         , rk(sa + n)
