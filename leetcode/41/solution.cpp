@@ -3,8 +3,8 @@ author: mark@mkmark.net
 time: O(n)
 space: O(1)
 
-Runtime: 121 ms, faster than 99.82% of C++ online submissions for First Missing Positive.
-Memory Usage: 84.6 MB, less than 25.72% of C++ online submissions for First Missing Positive.
+Runtime: 98 ms, faster than 99.94% of C++ online submissions for First Missing Positive.
+Memory Usage: 84.6 MB, less than 25.78% of C++ online submissions for First Missing Positive.
 */
 
 #include <bits/stdc++.h>
@@ -15,10 +15,12 @@ class Solution {
 public:
     int firstMissingPositive(vector<int>& nums) {
         int nums_size = size(nums);
+        int j;
+        int new_j;
         for (int i = 0; i<nums_size; ++i){
-            int j = nums[i];
+            j = nums[i];
             while (j>i && j<=nums_size){
-                int new_j = nums[j-1];
+                new_j = nums[j-1];
                 if (new_j == j){
                     break;
                 }
