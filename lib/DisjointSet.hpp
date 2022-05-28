@@ -5,23 +5,32 @@ author: mark@mkmark.net
 #include <bits/stdc++.h>
 using namespace std;
 
+template<class T>
 class DisjointSet {
 public:
-    // const int MAX_SIZE = 10000;
-    // int parent[MAX_SIZE];
-    vector<int> parent;
-    // int size[MAX_SIZE];
-    vector<int> size;
+    /// array
+    static const int MAX_SIZE = 10000;
+    T parent[MAX_SIZE];
+    T union_size[MAX_SIZE];
+    ///
+
+    /// vector
+    // vector<T> parent;
+    // vector<T> union_size;
+    ///
 
     DisjointSet(int max_size) {
-        //
-        parent.resize(max_size);
-        //
-        size.resize(max_size);
-        for (int i=0; i<max_size; ++i) {
-            parent[i] = i;
-            size[i] = 1;
-        }
+        /// array
+        iota(parent, parent+max_size, 0);
+        fill(union_size, union_size+max_size, 1);
+        ///
+
+        /// vector
+        // parent.resize(max_size);
+        // union_size.resize(max_size);
+        // iota(begin(parent), end(parent), 0);
+        // fill(begin(union_size), end(union_size), 1);
+        ///
     }
 
     int get_set(int x) {
@@ -34,10 +43,11 @@ public:
         a = get_set(a);
         b = get_set(b);
         if (a != b) {
-            if (size[a] < size[b])
+            if (union_size[a] < union_size[b]){
                 swap(a, b);
+            }
             parent[b] = a;
-            size[a] += size[b];
+            union_size[a] += union_size[b];
         }
     }
 };

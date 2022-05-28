@@ -11,6 +11,10 @@ Memory Usage:
 
 using namespace std;
 
+#define all(x) begin(x), end(x)
+typedef vector<int> vi;
+typedef vector<vector<int>> vvi;
+
 class Solution {
 public:
     int solution() {
