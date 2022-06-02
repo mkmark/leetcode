@@ -11,14 +11,15 @@ int main()
 {
     LeetCodeInput li("a.in");
 
-    vector<vector<int>> mat_1 = li.get_vvi(0);
+    // vector<vector<int>> mat_1 = li.get_vvi(0);
     // vector<int> arr_1 = li.get_vi(0);
     // int num_1 = li.get_i(0);
-    // string s_1 = li.get_s(0);
+    string s_1 = li.get_s(0);
+    string s_2 = li.get_s(1);
 
     chrono::steady_clock::time_point begin = chrono::steady_clock::now();
     Solution solution;
-    auto output = solution.cherryPickup(mat_1);
+    auto output = solution.minDistance(s_1, s_2);
     chrono::steady_clock::time_point end = chrono::steady_clock::now();
     cout << "Time difference = " << chrono::duration_cast<chrono::microseconds> (end - begin).count() << "µs" << endl;
 

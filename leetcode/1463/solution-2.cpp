@@ -15,11 +15,11 @@ class Solution {
 public:
     // i, j1, j2
     int dp[70][70][70];
-    // memset(dp, 0, sizeof dp); // not initialized, fast but unsafe
     // char seen[70][70][70]{};
     int m, n;
 
     int cherryPickup(vector<vector<int>>& grid) {
+        // memset(dp, 1, sizeof dp); // not initialized, fast but unsafe
         m = size(grid);
         n = size(grid[0]);
 
