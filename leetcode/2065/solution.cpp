@@ -3,8 +3,8 @@ author: mark@mkmark.net
 time: O()
 space: O()
 
-Runtime: 139 ms, faster than 97.93% of C++ online submissions for Maximum Path Quality of a Graph.
-Memory Usage: 34.5 MB, less than 6.80% of C++ online submissions for Maximum Path Quality of a Graph.
+Runtime: 93 ms, faster than 100.00% of C++ online submissions for Maximum Path Quality of a Graph.
+Memory Usage: 28.5 MB, less than 7.23% of C++ online submissions for Maximum Path Quality of a Graph.
 */
 
 #include <bits/stdc++.h>
@@ -20,10 +20,12 @@ class Solution
 public:
     int max_time;
     int max_sum = 0;
-    // dp[pos][sum] = time
+    // dp[pos, sum] = time
     unordered_map<long long, int> dp;
     // neighbours[pos][target_index] = {target_pos, time_of_edge}
     vector<vector<pair<int, int>>> neighbours;
+    // visited[index] = pos
+    int visited[12];
 
     int maximalPathQuality(vector<int> &values, vector<vector<int>> &edges, int maxTime)
     {
@@ -36,7 +38,7 @@ public:
             neighbours[edge[1]].push_back(make_pair(edge[0], edge[2]));
         }
 
-        int visited[1] = {};
+        visited[0] = 0;
         int visited_size = 1;
         
         dfs_max_path_quality(
@@ -44,7 +46,6 @@ public:
             0,
             values[0],
             values,
-            visited,
             visited_size
         );
         return max_sum;
@@ -55,49 +56,47 @@ public:
         int pos,
         int sum,
         vector<int>& values,
-        int *visited,
         int visited_size
     )
     {
-        if (time <= max_time)
+        if (pos == 0)
         {
-            if (pos == 0)
-            {
-                max_sum = max(max_sum, sum);
+            max_sum = max(max_sum, sum);
+        }
+        for (auto neighbour : neighbours[pos])
+        {
+            if (time + neighbour.second > max_time){
+                continue;
             }
-            for (auto neighbour : neighbours[pos])
-            {
-                if (find(visited, visited+visited_size, neighbour.first) != visited+visited_size)
-                {
-                    auto it = dp.find(((long long)neighbour.first<<32)+sum);
-                    if (it != dp.end() && it->second <= time + neighbour.second){
-                        continue;
-                    }
-                    dp[((long long)neighbour.first<<32)+sum] = time + neighbour.second;
-                    dfs_max_path_quality(
-                        time + neighbour.second,
-                        neighbour.first,
-                        sum,
-                        values,
-                        visited,
-                        visited_size
-                    );
+            // if neighbour is visited before
+            if (find(visited, visited+visited_size, neighbour.first) != visited+visited_size){
+                auto it = dp.find(((long long)neighbour.first<<32)+sum);
+                // if neighbour is reached previously with exact same sum, trim this senario
+                if (it != dp.end() && it->second <= time + neighbour.second){
+                    continue;
                 }
-                else
-                {
-                    dp[((long long)neighbour.first<<32)+sum+values[neighbour.first]] = time + neighbour.second;
-                    int new_visited[12];
-                    copy(visited, visited+visited_size, new_visited);
-                    new_visited[visited_size] = neighbour.first;
-                    dfs_max_path_quality(
-                        time + neighbour.second,
-                        neighbour.first,
-                        sum + values[neighbour.first],
-                        values,
-                        new_visited,
-                        visited_size+1
-                    );
-                }
+                // record pos, sum, and time
+                dp[((long long)neighbour.first<<32)+sum] = time + neighbour.second;
+                dfs_max_path_quality(
+                    time + neighbour.second,
+                    neighbour.first,
+                    sum,
+                    values,
+                    visited_size
+                );
+            // if neighbour is first time visited
+            } else {
+                // record pos, sum, and time
+                dp[((long long)neighbour.first<<32)+sum+values[neighbour.first]] = time + neighbour.second;
+                // mark visited
+                visited[visited_size] = neighbour.first;
+                dfs_max_path_quality(
+                    time + neighbour.second,
+                    neighbour.first,
+                    sum + values[neighbour.first],
+                    values,
+                    visited_size+1
+                );
             }
         }
     }
