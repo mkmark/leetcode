@@ -4,7 +4,7 @@ author: mark@mkmark.net
 
 #include <bits/stdc++.h>
 #include "../../lib/LeetCodeInput.hpp"
-#include "solution.cpp"
+#include "solution-2.cpp"
 using namespace std;
 
 int main()

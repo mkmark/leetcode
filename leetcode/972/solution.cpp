@@ -89,6 +89,9 @@ public:
             if (s_loop_size<t_loop_size){
                 swap(s_loop_size, t_loop_size);
             }
+            // actually here we should test gcd(s_loop_size, t_loop_size) == min_loop_size
+            // seems test case does not cover this edge case.
+            // at this point it's too many edge cases. opt for solution-2 instead.
             if ( s_loop_size % t_loop_size == 0){
                 return true;
             }
