@@ -1,6 +1,6 @@
 /*
 author: mark@mkmark.net
-reference: https://www.geeksforgeeks.org/%C2%AD%C2%ADkasais-algorithm-for-construction-of-lcp-array-from-suffix-array/
+reference: https://www.geeksforgeeks.org/kasais-algorithm-for-construction-of-lcp-array-from-suffix-array/
 */
 
 #include <bits/stdc++.h>
