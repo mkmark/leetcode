@@ -3,8 +3,8 @@ author: mark@mkmark.net
 time: O(mlogm)
 space: O(m)
 
-Runtime: 2274 ms, faster than 6.00% of C++ online submissions for Design Movie Rental System.
-Memory Usage: 438.1 MB, less than 15.00% of C++ online submissions for Design Movie Rental System.
+Runtime: 1059 ms, faster than 99.00% of C++ online submissions for Design Movie Rental System.
+Memory Usage: 396.7 MB, less than 82.00% of C++ online submissions for Design Movie Rental System.
 */
 
 #include <bits/stdc++.h>
@@ -17,11 +17,18 @@ typedef vector<vector<int>> vvi;
 
 class MovieRentingSystem {
 public:
+
+    struct pairHash {
+        size_t operator()(const pair<int, int>& p) const {
+        return ((long long) p.first <<14) + p.second;
+        }
+    };
+
     /// https://stackoverflow.com/a/55734733/18672686
     /// rendted[i] = {price, shop, movie}
     set<array<int, 3>> rented;
     /// price_by_shop_movie[shop][movie] = price
-    unordered_map<int, unordered_map<int, int>> price_by_shop_movie;
+    unordered_map<pair<int,int>, int, pairHash> price_by_shop_movie;
     /// unrented[movie] = {price, shop}
     unordered_map<int, set<pair<int, int>>> unrented;
 
@@ -29,7 +36,7 @@ public:
     MovieRentingSystem(int n, vector<vector<int>>& entries) {
         /// [shop, movie, price]
         for (auto & entry : entries){
-            price_by_shop_movie[entry[0]].insert({entry[1], entry[2]});
+            price_by_shop_movie.insert({{entry[0], entry[1]}, entry[2]});
             unrented[entry[1]].insert({entry[2], entry[0]});
         }
     }
@@ -53,7 +60,7 @@ public:
     /// SET rented=true
     /// WHERE shop=shop, movie=movie
     void rent(int shop, int movie) {
-        auto price = price_by_shop_movie[shop][movie];
+        auto price = price_by_shop_movie[{shop, movie}];
         auto it = unrented.find(movie);
         (*it).second.erase((*it).second.find({price, shop}));
         rented.insert({price, shop, movie});
@@ -62,7 +69,7 @@ public:
     /// SET rented=false
     /// WHERE shop=shop, movie=movie
     void drop(int shop, int movie) {
-        auto price = price_by_shop_movie[shop][movie];
+        auto price = price_by_shop_movie[{shop, movie}];
         unrented[movie].insert({price, shop});
         rented.erase(rented.find({price, shop, movie}));
     }
