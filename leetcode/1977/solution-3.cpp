@@ -1,9 +1,21 @@
 /*
 author: mark@mkmark.net
-reference: leetcode 1044 fastest solution
+time: O()
+space: O()
+
+Runtime: 1029 ms, faster than 34.12% of C++ online submissions for Number of Ways to Separate Numbers.
+Memory Usage: 185.8 MB, less than 9.52% of C++ online submissions for Number of Ways to Separate Numbers.
+
+dfs + dp + sum dp + suffix array
 */
 
 #include <bits/stdc++.h>
+
+using namespace std;
+
+#define all(x) begin(x), end(x)
+typedef vector<int> vi;
+typedef vector<vector<int>> vvi;
 
 /**
  * @brief suffix array using SA-IS 
@@ -203,3 +215,98 @@ public:
     //     return ht[p];
     // }
 };
+
+class Solution {
+public:
+    int n;
+    /// dp[i][j] = sum(dp[j+1][2j-i .. n]), if flag
+    ///            sum(dp[j+1][2j-i+1 .. n]), otherwise
+
+    /// sumdp[i][j] = sum(dp[i][j .. n]), j>i
+    /// dp[i][j] = sumdp[j+1][n] - sumdp[j+1][2j-i], if flag
+    ///            sumdp[j+1][n] - sumdp[j+1][2j-i+1], otherwise
+    vvi * ptr_dp;
+    vvi * ptr_dpsum;
+    vi * ptr_dpsum_caled;
+    string * ptr_num;
+    unsigned * rk;
+    vector<vector<unsigned>> * ptr_lcp;
+
+    int numberOfCombinations(string& num) {
+        if (num[0] == 0) return 0;
+        ptr_num = & num;
+        n = size(num);
+        
+        vvi dp(n, vi(n, -1));
+        ptr_dp = & dp;
+        vvi dpsum(n, vi(n+1));
+        ptr_dpsum = & dpsum;
+        vi dpsum_caled(n, n);
+        ptr_dpsum_caled = & dpsum_caled;
+        SuffixArray suffixArray(num, n, 128);
+        rk = suffixArray.rk;
+        vector<vector<unsigned>> lcp(n, vector<unsigned>(n, UINT32_MAX));
+        ptr_lcp = & lcp;
+        for (int i = 0; i < n; ++i){
+            for (int j = i+1; j < n; ++j){
+                lcp[i][j] = min(lcp[i][j-1], suffixArray.ht[j]);
+            }
+        }
+
+        int res=0;
+        for (int i=0; i<n; ++i){
+            res += dfs_comb(0, i);
+            res %= 1000000007;
+        }
+        return res;
+    }
+
+    inline int get_min_nxt_end(int& l, int& r){
+        int nxt_l = r+1;
+        if ((n-1-nxt_l)<(r-l)) return 0;
+        if (rk[nxt_l] < rk[l] && ((*ptr_lcp)[rk[nxt_l]][rk[l]] <= r-l)){
+            return r*2+2-l;
+        } else {
+            return r*2+1-l;
+        }
+    }
+
+    /**
+     * @brief 
+     * 
+     * @param l current begin
+     * @param r current rbegin
+     * @param num 
+     * @param dp 
+     * @return int 
+     */
+    int dfs_comb(int l, int r){
+        if ((*ptr_dp)[l][r] > -1) return (*ptr_dp)[l][r];
+        if ((*ptr_num)[l]=='0') return (*ptr_dp)[l][r]=0;
+        if (r == n-1) return (*ptr_dp)[l][r] = 1;
+
+        int min_nxt_end = get_min_nxt_end(l, r);
+
+        if (min_nxt_end){
+            if (min_nxt_end < (*ptr_dpsum_caled)[r+1]){
+                for (int i=(*ptr_dpsum_caled)[r+1]-1; i>=min_nxt_end; --i){
+                    (*ptr_dpsum)[r+1][i] = (*ptr_dpsum)[r+1][i+1] + dfs_comb(r+1, i);
+                    (*ptr_dpsum)[r+1][i] %= 1000000007;
+                }
+                (*ptr_dpsum_caled)[r+1] = min_nxt_end;
+            }
+            (*ptr_dp)[l][r] = (*ptr_dpsum)[r+1][min_nxt_end];
+            (*ptr_dp)[l][r] %= 1000000007;
+            return (*ptr_dp)[l][r];
+        } else {
+            return (*ptr_dp)[l][r] = 0;
+        }
+    }
+};
+
+const static auto initialize = [] {
+    std::ios::sync_with_stdio(false);
+    std::cin.tie(nullptr);
+    std::cout.tie(nullptr);
+    return nullptr;
+}();
