@@ -27,7 +27,7 @@ namespace SegmentTree {
                 n >>= 1;
                 count += 1;
             }
-            int tree_size = 2 << count;
+            int tree_size = 1 << count;
 
             // special indicator because we care only if a range is covered
             covered = vector<long>(tree_size, 0);
@@ -84,5 +84,9 @@ namespace SegmentTree {
         public : long top() {
             return values[1];
         }
+
+        #undef m
+        #undef o_l
+        #undef o_r
     };
 }
