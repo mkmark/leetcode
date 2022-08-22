@@ -17,7 +17,7 @@ typedef vector<vector<int>> vvi;
 
 class Solution {
 public:
-    int solution() {
+    int solution(vvi l0) {
         
     }
 };

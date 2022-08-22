@@ -1,5 +1,6 @@
 /*
 author: mark@mkmark.net
+depreciated, use LeetCodeInputTemplate
 */
 
 #include <bits/stdc++.h>
@@ -14,14 +15,19 @@ class LeetCodeInput{
     vector<string>          r2vr(string& r);
     vector<vector<string>>  r2vvr(string& r);
     vector<int>             vr2vi(vector<string>& vr);
+    vector<char>            vr2vc(vector<string>& vr);
     vector<string>          vr2vs(vector<string>& vr);
     vector<vector<int>>     vvr2vvi(vector<vector<string>>& vvr);
+    vector<vector<char>>    vvr2vvc(vector<vector<string>>& vvr);
     vector<vector<string>>  vvr2vvs(vector<vector<string>>& vvr);
 
     int                     r2i(string& r);
+    char                    r2c(string& r);
     string                  r2s(string& r);
     vector<int>             r2vi(string& r);
+    vector<char>            r2vc(string& r);
     vector<vector<int>>     r2vvi(string& r);
+    vector<vector<char>>    r2vvc(string& r);
     vector<string>          r2vs(string& r);
     vector<vector<string>>  r2vvs(string& r);
 public: 
@@ -35,6 +41,7 @@ public:
     string                  get_s(int line)     {return r2s(lines[line]);};
     vector<int>             get_vi(int line)    {return r2vi(lines[line]);};
     vector<vector<int>>     get_vvi(int line)   {return r2vvi(lines[line]);};
+    vector<vector<char>>    get_vvc(int line)   {return r2vvc(lines[line]);};
     vector<string>          get_vs(int line)    {return r2vs(lines[line]);};
     vector<vector<string>>  get_vvs(int line)   {return r2vvs(lines[line]);};
 };
@@ -85,6 +92,10 @@ int LeetCodeInput::r2i(string& r){
     return stoi(r);
 }
 
+char LeetCodeInput::r2c(string& r){
+    return r[1];
+}
+
 string LeetCodeInput::r2s(string& r){
     return r.substr(1, r.size() - 2);;
 }
@@ -101,6 +112,15 @@ vector<int> LeetCodeInput::vr2vi(vector<string>& vr){
         vi[i] = r2i(vr[i]);
     }
     return vi;
+}
+
+vector<char> LeetCodeInput::vr2vc(vector<string>& vr){
+    int n = vr.size();
+    vector<char> vc(n);
+    for (int i=0; i<n; ++i){
+        vc[i] = r2c(vr[i]);
+    }
+    return vc;
 }
 
 vector<string> LeetCodeInput::vr2vs(vector<string>& vr){
@@ -132,6 +152,15 @@ vector<vector<int>> LeetCodeInput::vvr2vvi(vector<vector<string>>& vvr){
     return vvi;
 }
 
+vector<vector<char>> LeetCodeInput::vvr2vvc(vector<vector<string>>& vvr){
+    int n = vvr.size();
+    vector<vector<char>> vvc(n);
+    for (int i=0; i<n; ++i){
+        vvc[i] = vr2vc(vvr[i]);
+    }
+    return vvc;
+}
+
 vector<vector<string>> LeetCodeInput::vvr2vvs(vector<vector<string>>& vvr){
     int n = vvr.size();
     vector<vector<string>> vvs(n);
@@ -149,6 +178,11 @@ vector<int> LeetCodeInput::r2vi(string& r){
 vector<vector<int>> LeetCodeInput::r2vvi(string& r){
     auto vvr = r2vvr(r);
     return vvr2vvi(vvr);
+}
+
+vector<vector<char>> LeetCodeInput::r2vvc(string& r){
+    auto vvr = r2vvr(r);
+    return vvr2vvc(vvr);
 }
 
 vector<string> LeetCodeInput::r2vs(string& r){
