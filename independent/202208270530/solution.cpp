@@ -23,7 +23,7 @@ public:
         uint32_t status = 0;
         int ans = 0;
         for (int i=0; i<n; ++i){
-            status ^= s[i]-'a';
+            status ^= s[i]-'a'+1;
             auto res = pos_by_val.emplace(status, i);
             if (!res.second){
                 ans = max(ans, i-(*res.first).second);
