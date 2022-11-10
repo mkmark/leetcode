@@ -3,8 +3,8 @@ author: mark@mkmark.net
 time: O()
 space: O()
 
-Runtime: 
-Memory Usage: 
+Runtime:
+Memory Usage:
 */
 
 #include <bits/stdc++.h>
@@ -16,15 +16,13 @@ typedef vector<int> vi;
 typedef vector<vector<int>> vvi;
 
 class Solution {
-public:
-    int solution(vvi l0) {
-        
-    }
+ public:
+  int solution(vvi l0) {}
 };
 
 const static auto initialize = [] {
-    std::ios::sync_with_stdio(false);
-    std::cin.tie(nullptr);
-    std::cout.tie(nullptr);
-    return nullptr;
+  std::ios::sync_with_stdio(false);
+  std::cin.tie(nullptr);
+  std::cout.tie(nullptr);
+  return nullptr;
 }();
